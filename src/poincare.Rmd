@@ -1,0 +1,71 @@
+---
+title: "poincare"
+author: Hideki Akazawa
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# ポワンカレのパン
+## パン屋のパラメータ設定
+パン屋は平均950, 標準偏差20のパンを一日に1000個焼く．
+ポワンカレは10000日間毎日パンを買い続ける．
+```{r}
+howmanybaked<-1000 #パン屋が1日に焼くパンの数
+breadmean<-950     #パンの平均
+breadsd<-20        #標準偏差
+days<-10000        #ポワンカレが買い続けた日数
+```
+
+## パン屋が1日に焼くパンの分布．
+```{r}
+bakedbreads<-rnorm(howmanybaked, mean=breadmean, sd=breadsd)
+hist(bakedbreads,breaks=seq(850,1100,1), main="")
+```
+
+## ポワンカレが買ったパンの分布
+```{r}
+boughtr<-NULL
+for(i in 1:days){
+  bakedbreads<-rnorm(howmanybaked, mean=breadmean, sd=breadsd)
+  boughtr<-c(boughtr,sample(bakedbreads,1))
+}
+hist(boughtr,breaks=seq(850,1100,1), main="")
+```
+
+**サンプル数が増えるほど，パン屋が1日に焼くパンの分布に近づく(大数の法則)**
+
+平均950，標準偏差20の正規分布になっていることが判明→**通報！**
+
+パン屋は改心せずに，その日の一番大きいパンをポワンカレに売るようになる． 
+
+## ポワンカレが買ったパンの分布(1回目通報後)
+```{r}
+boughta<-NULL
+for(i in 1:days){
+  bakedbreads<-rnorm(howmanybaked, mean=breadmean, sd=breadsd)
+  boughta<-c(boughta,max(bakedbreads))
+}
+hist(boughta,breaks=seq(850,1100,1), main="")
+```
+
+正規分布になっていないことが判明→**通報！(2回目)**
+
+## ポワンカレが期待したパンの分布（1回目通報後）
+ポワンカレは平均が1000の正規分布になることを期待した．
+```{r}
+breadmeana<-1000
+breadsda<-5
+
+expecteda<-NULL
+for(i in 1:days){
+  bakedbreads<-rnorm(howmanybaked, mean=breadmeana, sd=breadsda)
+  expecteda<-c(expecteda,sample(bakedbreads,1))
+}
+hist(expecteda,breaks=seq(850,1100,1), main="")
+```
+
+
+
