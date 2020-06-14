@@ -1,0 +1,23 @@
+body {
+	background-color: #FFF9DE;
+	font-family: Meiryo;
+	text-align: center;
+}
+p.title {
+	text-align: left;
+	font-size: xx-large;
+	font-weight: bold;
+	background-color: #2A51D1;
+    vertical-align: middle;
+    padding: 30_px;
+    color: #ffffff;
+}
+h1 {
+	text-align: center;
+}
+section.header {
+	background-color: #2A51D1;
+}
+.float{
+	display: inline-block;
+}
