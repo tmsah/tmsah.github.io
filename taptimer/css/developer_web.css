@@ -1,5 +1,5 @@
 body {
-	background-color: #FFF9DE;
+	background-color: #eeeeee;
 	font-family: Meiryo;
 	text-align: center;
 }
@@ -7,7 +7,7 @@ p.title {
 	text-align: left;
 	font-size: xx-large;
 	font-weight: bold;
-	background-color: #2A51D1;
+	background-color: #02D4FF;
     vertical-align: middle;
     padding: 30_px;
     color: #ffffff;
