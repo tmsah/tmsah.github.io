@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title><ナゾ解き>ポストにラクガキしたのは誰！？</title>
+    <script src="../js/check.js"></script>
+  </head>
+  <body>
+    <section class="header">
+      <p class="title"><ナゾ解き>ポストにラクガキしたのは誰！？</p>
+    </section>
+
+    <section class="main-content">
+      残念。
+      <p id="prank_time"></p>
+      の
+      <p id="prankster"></p>
+      の行動は、
+      <p id="witness"></p>
+      が証言してくれていたはずだ！<br>
+      彼らの証言をもとに、もう一度考えてみよう。
+    </p>
+    <input type="button" value="戻る" onclick="backToQuiz()" />
+    </section>
+
+    <script>
+      if (window.localStorage) {
+        const selected_data = JSON.parse(
+          sessionStorage.getItem("selected_data")
+        );
+        const prank_time = document.getElementById('prank_time');
+        prank_time.innerHTML += selected_data.prank_time;
+        const prankster = document.getElementById('prankster');
+        prankster.innerHTML += selected_data.prankster;
+        const witness = document.getElementById('witness');
+        witness.innerHTML += selected_data.witness;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title><ナゾ解き>ポストにラクガキしたのは誰！？</title>
+    <script src="../js/check.js"></script>
+  </head>
+  <body>
+    <section class="header">
+      <p class="title"><ナゾ解き>ポストにラクガキしたのは誰！？</p>
+    </section>
+
+    <section class="main-content">
+      正解！ ラクガキは
+      <p id="prankster"></p>
+      の仕業だった！<br />
+      犯行時刻は
+      <p id="prank_time"></p>
+      だ！
+
+      <input type="button" value="戻る" onclick="backToQuiz()" />
+    </section>
+
+    <script>
+      if (window.localStorage) {
+        const selected_data = JSON.parse(
+          sessionStorage.getItem("selected_data")
+        );
+        const prank_time = document.getElementById("prank_time");
+        prank_time.innerHTML += selected_data.prank_time;
+        const prankster = document.getElementById("prankster");
+        prankster.innerHTML += selected_data.prankster;
+      }
+    </script>
+  </body>
+</html>
