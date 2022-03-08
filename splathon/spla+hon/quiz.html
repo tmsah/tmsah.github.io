@@ -2,16 +2,19 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
 
     <title><ナゾ解き>ポストにラクガキしたのは誰！？</title>
     <script src="./js/check.js"></script>
   </head>
   <body>
-    <section class="header">
-      <p class="title"><ナゾ解き>ポストにラクガキしたのは誰！？</p>
-    </section>
+    <p class="title-image">
+      <img border="0" src="./images/title.png" alt="title.png" />
+    </p>
 
     <section class="main-content">
+      <img border="0" src="./images/members.png" alt="members.png" />
+      <div>犯行時刻と犯人を選択しよう！</div>
       <select id="prank_time">
         <option value="13:00 - 14:00">13:00 - 14:00</option>
         <option value="14:00 - 15:00">14:00 - 15:00</option>
@@ -26,7 +29,9 @@
         <option value="ヒメ">ヒメ</option>
         <option value="スパイキー">スパイキー</option>
       </select>
-      <input type="button" value="決定" onclick="checkAnswer()" />
+      <div>
+        <input type="button" value="決定" onclick="checkAnswer()" />
+      </div>
     </section>
   </body>
 </html>
