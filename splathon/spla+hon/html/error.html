@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon.png"
+      sizes="16x16 24x24 32x32 48x48 64x64"
+    />
+
+    <title>ポストにラクガキしたのは誰！？</title>
+    <script src="../js/check.js"></script>
+  </head>
+  <body>
+    <p class="title-image">
+      <img border="0" src="../images/title.png" alt="title.png" />
+    </p>
+
+    <section class="main-content">
+      <h1 class="error">エラーが発生した！</h1>
+      <img border="0" src="../images/error.png" alt="correct.png" />
+      <div>
+        にﾞっ！<br /><br />
+        (エラーが発生してしまったぞ！<br /><br />
+        もしかしてこのURLを直接開こうとしたりしなかっただろうか。<br /><br />
+        すまないが、元の画面からやり直してくれ。)
+      </div>
+      <br />
+      <input type="button" value="戻る" onclick="backToQuiz()" />
+    </section>
+
+    <script>
+      if (window.localStorage) {
+        const selected_data = JSON.parse(
+          sessionStorage.getItem("selected_data")
+        );
+      }
+    </script>
+  </body>
+</html>

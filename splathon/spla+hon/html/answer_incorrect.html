@@ -38,6 +38,9 @@
         const selected_data = JSON.parse(
           sessionStorage.getItem("selected_data")
         );
+        if (selected_data == null || selected_data.witness == "-") {
+          window.location.href = "../html/error.html";
+        }
         const prank_time = document.getElementById("prank_time");
         prank_time.innerHTML += selected_data.prank_time;
         const prankster = document.getElementById("prankster");

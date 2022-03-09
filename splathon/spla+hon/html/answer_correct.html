@@ -29,9 +29,19 @@
         <p id="prank_time"></p>
         だったぞ！<br /><br />
         これ以外の人物、時間帯はすべてウラが取れている。<br /><br />
-        詳細はイカの通りだ！
+        詳細はイカの通りだ！<br /><br />
       </div>
-      <br />
+      <img
+        width="100%"
+        border="0"
+        src="../images/action.png"
+        alt="action.png"
+      />
+      <img border="0" src="../images/witnesses.png" alt="witnesses.png" />
+      <br /><br />
+      ナゾ解きに挑んでくれてありがとう！<br /><br />
+      手こずった人もいるかもしれないが、<br />楽しんでくれたなら何よりだ。<br /><br />
+      それじゃ、バンカラ地方でまた会おう！<br /><br />
       <input type="button" value="戻る" onclick="backToQuiz()" />
     </section>
 
@@ -40,8 +50,8 @@
         const selected_data = JSON.parse(
           sessionStorage.getItem("selected_data")
         );
-        if (selected_data.witness != "-") {
-          window.location.href = "../html/answer_incorrect.html";
+        if (selected_data == null || selected_data.witness != "-") {
+          window.location.href = "../html/error.html";
         }
         const prank_time = document.getElementById("prank_time");
         prank_time.innerHTML += selected_data.prank_time;
