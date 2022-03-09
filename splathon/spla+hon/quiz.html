@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon.png"
+      sizes="16x16 24x24 32x32 48x48 64x64"
+    />
 
-    <title><ナゾ解き>ポストにラクガキしたのは誰！？</title>
+    <title>ポストにラクガキしたのは誰！？</title>
     <script src="./js/check.js"></script>
   </head>
   <body>
@@ -14,23 +20,33 @@
 
     <section class="main-content">
       <img border="0" src="./images/members.png" alt="members.png" />
+      <br />
       <div>犯行時刻と犯人を選択しよう！</div>
-      <select id="prank_time">
-        <option value="13:00 - 14:00">13:00 - 14:00</option>
-        <option value="14:00 - 15:00">14:00 - 15:00</option>
-        <option value="15:00 - 16:00">15:00 - 16:00</option>
-        <option value="16:00 - 17:00">16:00 - 17:00</option>
-        <option value="17:00 - 18:00">17:00 - 18:00</option>
-      </select>
-      <select id="prankster">
-        <option value="アオリ">アオリ</option>
-        <option value="グソクさん">グソクさん</option>
-        <option value="ロブ">ロブ</option>
-        <option value="ヒメ">ヒメ</option>
-        <option value="スパイキー">スパイキー</option>
-      </select>
+      <br />
       <div>
-        <input type="button" value="決定" onclick="checkAnswer()" />
+        犯行時刻：
+        <select id="prank_time">
+          <option value="13:00 - 14:00">13:00 - 14:00</option>
+          <option value="14:00 - 15:00">14:00 - 15:00</option>
+          <option value="15:00 - 16:00">15:00 - 16:00</option>
+          <option value="16:00 - 17:00">16:00 - 17:00</option>
+          <option value="17:00 - 18:00">17:00 - 18:00</option>
+        </select>
+      </div>
+      <br />
+      <div>
+        犯人：
+        <select id="prankster">
+          <option value="アオリ">アオリ</option>
+          <option value="グソクさん">グソクさん</option>
+          <option value="ロブ">ロブ</option>
+          <option value="ヒメ">ヒメ</option>
+          <option value="スパイキー">スパイキー</option>
+        </select>
+      </div>
+      <br />
+      <div>
+        <input type="button" value="決定！" onclick="checkAnswer()" />
       </div>
     </section>
   </body>
