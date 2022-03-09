@@ -11,13 +11,6 @@ body {
   padding: 10px;
   margin: 30px auto;
 }
-p.title {
-  text-align: center;
-  font-size: xx-large;
-  font-weight: bold;
-  background-color: #2a51d1;
-  vertical-align: middle;
-}
 
 section.main-content {
   width: 100%;
@@ -31,8 +24,13 @@ section.main-content img {
   text-align: right;
   max-width: 70%;
 }
-h1 {
+h1.correct {
   text-align: center;
+  color: red;
+}
+h1.incorrect {
+  text-align: center;
+  color: blue;
 }
 p.title-image {
   text-align: center;

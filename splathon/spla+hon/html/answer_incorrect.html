@@ -2,26 +2,35 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon.png"
+      sizes="16x16 24x24 32x32 48x48 64x64"
+    />
 
-    <title><ナゾ解き>ポストにラクガキしたのは誰！？</title>
+    <title>ポストにラクガキしたのは誰！？</title>
     <script src="../js/check.js"></script>
   </head>
   <body>
-    <section class="header">
-      <p class="title"><ナゾ解き>ポストにラクガキしたのは誰！？</p>
-    </section>
+    <p class="title-image">
+      <img border="0" src="../images/title.png" alt="title.png" />
+    </p>
 
     <section class="main-content">
-      残念。
+      <h1 class="incorrect">ザンネン。。。</h1>
+      <img border="0" src="../images/incorrect.png" alt="incorrect.png" />
       <p id="prank_time"></p>
       の
       <p id="prankster"></p>
       の行動は、
       <p id="witness"></p>
-      が証言してくれていたはずだ！<br>
-      彼らの証言をもとに、もう一度考えてみよう。
-    </p>
-    <input type="button" value="戻る" onclick="backToQuiz()" />
+      が証言してくれていたはずだ！<br />
+      彼らの証言をもとに、もう一度考えてみよう。<br /><br />
+      <div>
+        <input type="button" value="戻る" onclick="backToQuiz()" />
+      </div>
     </section>
 
     <script>
@@ -29,11 +38,11 @@
         const selected_data = JSON.parse(
           sessionStorage.getItem("selected_data")
         );
-        const prank_time = document.getElementById('prank_time');
+        const prank_time = document.getElementById("prank_time");
         prank_time.innerHTML += selected_data.prank_time;
-        const prankster = document.getElementById('prankster');
+        const prankster = document.getElementById("prankster");
         prankster.innerHTML += selected_data.prankster;
-        const witness = document.getElementById('witness');
+        const witness = document.getElementById("witness");
         witness.innerHTML += selected_data.witness;
       }
     </script>

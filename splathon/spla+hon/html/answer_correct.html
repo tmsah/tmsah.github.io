@@ -2,23 +2,36 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon.png"
+      sizes="16x16 24x24 32x32 48x48 64x64"
+    />
 
-    <title><ナゾ解き>ポストにラクガキしたのは誰！？</title>
+    <title>ポストにラクガキしたのは誰！？</title>
     <script src="../js/check.js"></script>
   </head>
   <body>
-    <section class="header">
-      <p class="title"><ナゾ解き>ポストにラクガキしたのは誰！？</p>
-    </section>
+    <p class="title-image">
+      <img border="0" src="../images/title.png" alt="title.png" />
+    </p>
 
     <section class="main-content">
-      正解！ ラクガキは
-      <p id="prankster"></p>
-      の仕業だった！<br />
-      犯行時刻は
-      <p id="prank_time"></p>
-      だ！
-
+      <h1 class="correct">お見事！！！</h1>
+      <img border="0" src="../images/correct.png" alt="correct.png" />
+      <div>
+        ラクガキは
+        <p id="prankster"></p>
+        のしわざだった！<br /><br />
+        犯行時刻は
+        <p id="prank_time"></p>
+        だったぞ！<br /><br />
+        これ以外の人物、時間帯はすべてウラが取れている。<br /><br />
+        詳細はイカの通りだ！
+      </div>
+      <br />
       <input type="button" value="戻る" onclick="backToQuiz()" />
     </section>
 
@@ -27,6 +40,9 @@
         const selected_data = JSON.parse(
           sessionStorage.getItem("selected_data")
         );
+        if (selected_data.witness != "-") {
+          window.location.href = "../html/answer_incorrect.html";
+        }
         const prank_time = document.getElementById("prank_time");
         prank_time.innerHTML += selected_data.prank_time;
         const prankster = document.getElementById("prankster");
