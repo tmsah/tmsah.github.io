@@ -1,0 +1,54 @@
+html {
+  font-size: 100%;
+}
+body {
+  background-image: url("../images/background.png");
+  background-size: auto 2500px;
+  font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro",
+    "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
+  font-size: xx-large;
+  padding: 10px;
+  margin: 30px auto;
+}
+
+section.main-content {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 2%;
+}
+section.main-content img {
+  text-align: right;
+  max-width: 80%;
+}
+h1.correct {
+  text-align: center;
+  color: red;
+}
+h1.incorrect {
+  text-align: center;
+  color: blue;
+}
+h1.error {
+  text-align: center;
+  color: red;
+}
+p.title-image {
+  text-align: center;
+  max-width: 800px;
+}
+p.title-image img {
+  width: 100%;
+}
+
+select {
+  width: 30%;
+  font-size: xx-large;
+}
+
+input {
+  font-size: xx-large;
+}
